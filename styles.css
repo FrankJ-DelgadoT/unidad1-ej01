@@ -1,0 +1,96 @@
+body {
+  background-image: url('images/Background02.jpg');
+  background-size: cover;
+  background-position: cover;
+}
+
+/* Estilos para los enlaces con apariencia de botón */
+.button-link {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button-link:hover {
+  background-color: #2980b9;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(24, 59, 82); /* Cambio de color de fondo a un tono amarillo brillante */
+  padding: 20px;
+  border: 2px solid rgb(4, 23, 36); /* Cambio de color del borde a un rojo intenso */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Aumento de la opacidad de la sombra */
+  z-index: 9999;
+  border-radius: 10px; /* Añadir bordes redondeados para un aspecto más suave */
+  color: #fff; /* Cambio de color del texto a blanco */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* Estilo para cuando el popup está visible */
+.popup.visible {
+  display: block;
+  opacity: 1; /* Hacer visible */
+}
+
+.contact-info {
+  position: fixed;
+  bottom: 10px;
+  right: 7px;
+  background-color: rgb(24, 59, 82);;
+  padding: 10px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.imagen {
+  width: 3%;
+  height: auto; /* Esto mantendrá la proporción de la imagen */
+}
+
+.gallery-container {
+  display: flex; /* Alinear las galerías horizontalmente */
+}
+
+.image-gallery {
+  /* Estilos para cada galería */
+  position: relative; /* Posición relativa para posicionar las imágenes */
+  width: 250px; /* Ancho del contenedor */
+  height: 300px; /* Altura del contenedor */
+  overflow: hidden; /* Oculta el exceso de imágenes fuera del contenedor */
+  border: 1px solid #ccc; /* Borde para el contenedor */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin-right: 10px; /* Espacio entre las galerías */
+}
+
+.image-gallery img {
+  width: 100%; /* Ajusta el ancho de las imágenes al contenedor */
+  display: block;
+  margin-top: -200px; /* Empieza desde arriba (-altura del contenedor) */
+  animation-duration: 40s; /* Duración de la animación */
+  animation-timing-function: linear; /* Función de temporización de la animación */
+  animation-iteration-count: infinite; /* Repetición infinita de la animación */
+}
+
+/* Keyframes para la animación de desplazamiento */
+@keyframes scroll-up {
+  0% {
+    margin-top: -200px; /* Comienza desde arriba */
+  }
+  100% {
+    margin-top: 0; /* Termina en la parte superior del contenedor */
+  }
+}
